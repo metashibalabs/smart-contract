@@ -635,7 +635,7 @@ contract BusdDividendTracker is DividendPayingToken, Ownable {
     mapping (address => bool) public excludedFromDividends;
 
     constructor() DividendPayingToken("METASHIBA_BUSD_Dividend_Tracker", "METASHIBA_BUSD_Dividend_Tracker", 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56) {
-        minimumTokenBalanceForDividends = 1000000 * (10**18); //must hold 1000000+ tokens
+        minimumTokenBalanceForDividends = 1000000000 * (10**18); //must hold 1000000000+ tokens
     }
 
     function updateMinimumTokenBalanceForDividends(uint256 _newMinimumBalance) external onlyOwner {
@@ -751,7 +751,7 @@ contract MetaShibaInu is ERC20, Ownable, ReentrancyGuard {
 
     uint256 public maxBuyTransactionAmount = 1000000000000000 * 10 ** 18;
     uint256 public maxSellTransactionAmount = 50000000000000 * 10 ** 18;
-    uint256 public swapTokensAtAmount = 100000000000 * 10 ** 18;
+    uint256 public swapTokensAtAmount = 10000000000 * 10 ** 18;
     uint256 public maxWalletToken = 1000000000000000 * 10 ** 18;
 
     bool public isLiquidityInBnb = true;
